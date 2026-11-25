@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Casa Mia Austevoll</title>
+<meta name="description" content="Casa Mia Austevoll i Storebø: pizza, grill, tex mex, kebab og pasta. Spis inne, på uteserveringen eller hent selv. Åpent hver dag fra kl. 14. Ring 56 18 00 02.">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#1d5a57">
+<meta property="og:type" content="restaurant.restaurant">
+<meta property="og:locale" content="nb_NO">
+<meta property="og:site_name" content="Casa Mia Austevoll">
+<meta property="og:title" content="Casa Mia Austevoll – restaurant, pub og uteservering i Storebø">
+<meta property="og:description" content="À la carte-restaurant midt i Storebø. Åpent hver dag fra kl. 14. Komle hver torsdag, pub på lørdager og uteservering.">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231d5a57'/%3E%3Ctext x='32' y='43' text-anchor='middle' font-family='Georgia,serif' font-size='30' fill='%23fff'%3ECM%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Figtree:wght@400;600&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "Casa Mia Austevoll",
+  "legalName": "Casa Mia Austevoll AS",
+  "description": "À la carte-restaurant med pub, uteservering og mat til å hente i Storebø, Austevoll.",
+  "telephone": "+47 56 18 00 02",
+  "priceRange": "200–300 kr",
+  "servesCuisine": ["Pizza", "Tex Mex", "Grill", "Kebab", "Pasta", "Burger"],
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Gamle Prestegården, Fylkesvei 152",
+    "postalCode": "5392",
+    "addressLocality": "Storebø",
+    "addressRegion": "Vestland",
+    "addressCountry": "NO"
+  },
+  "openingHoursSpecification": [
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Sunday"], "opens": "14:00", "closes": "21:00"},
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Friday","Saturday"], "opens": "14:00", "closes": "22:00"}
+  ],
+  "hasMap": "https://www.google.com/maps/search/?api=1&query=Casa+Mia+Austevoll+AS+Storeb%C3%B8",
+  "sameAs": ["https://www.facebook.com/casamiaaustevoll", "https://www.instagram.com/casamiaaustevoll/"]
+}
+</script>
+<style>
+/* VOICE: warm, local, unpretentious – the island's meeting place
+   IDEA: a trattoria menu card propped on a table by Storebø harbour at dusk
+   PICTURE: layered dusk scene – fjord, islands, lit restaurant house, a table with glass and candle
+   COLOUR and TYPE: fjord green field, white ground, tomato red accent; Young Serif + Figtree
+   LAYOUT: scene hero, story, services, menu card on green, news, hours + reviews, rental, visit, footer */
+:root{color-scheme:light dark;
+ --bg:light-dark(#fbfaf7,#0f1a1b);--ink:light-dark(#14211f,#eef1ec);--muted:light-dark(#55625f,#a8b3ae);
+ --fjord:light-dark(#1d5a57,#163f3d);--fjord2:light-dark(#2f7a74,#5fb3aa);--card:light-dark(#ffffff,#162425);
+ --line:light-dark(#e3e6e0,#26393a);--red:#d63a24;--redink:light-dark(#b8301c,#ff8a73);--soft:light-dark(#f3efe6,#1b2b2c)}
+:root[data-theme=light]{color-scheme:light}:root[data-theme=dark]{color-scheme:dark}
+*{box-sizing:border-box;min-width:0}
+html{scroll-behavior:smooth;scroll-padding-top:76px;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 Figtree,system-ui,-apple-system,"Segoe UI",sans-serif;overflow-x:clip}
+h1,h2,h3{font-family:"Young Serif",Georgia,serif;font-weight:400;line-height:1.08;text-wrap:balance;margin:0}
+h2{font-size:clamp(32px,4.5vw,48px);margin-bottom:14px}h3{font-size:21px;line-height:1.25}
+p{margin:0 0 1em}a{color:inherit}
+.wrap{max-width:1240px;margin:0 auto}
+.band{padding:clamp(56px,7vw,104px) max(5vw,16px)}
+.sub{color:var(--muted);max-width:38em;font-size:18px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:48px;padding:0 22px;border-radius:999px;background:var(--red);color:#fff;font-weight:600;text-decoration:none;border:0;font:inherit;font-weight:600;cursor:pointer;transition:transform .2s,background .2s;white-space:nowrap}
+.btn:hover{transform:translateY(-2px);background:#bf2f1b}
+.btn.line{background:transparent;color:inherit;border:1.5px solid currentColor}.btn.line:hover{background:color-mix(in srgb,currentColor 10%,transparent)}
+.btn svg{width:18px;height:18px;flex:none}
+a:focus-visible,button:focus-visible{outline:3px solid var(--red);outline-offset:3px;border-radius:6px}
+.skip{position:absolute;left:-999px;top:8px;background:#fff;color:#000;padding:10px 14px;z-index:99}.skip:focus{left:8px}
+
+/* nav */
+nav{position:fixed;inset:0 0 auto;z-index:30;display:flex;align-items:center;gap:16px;padding:10px max(5vw,16px);color:#fff;transition:background .3s,box-shadow .3s}
+nav.solid,nav.open{background:#174a47;box-shadow:0 6px 20px -12px rgba(0,0,0,.5)}
+.logo{font-family:"Young Serif",serif;font-size:22px;text-decoration:none;white-space:nowrap;margin-right:auto}
+.links{display:flex;flex-wrap:wrap;gap:4px 22px;list-style:none;margin:0;padding:0;font-size:15px}
+.links a{text-decoration:none;opacity:.92;padding:10px 0;display:inline-block}.links a:hover{opacity:1;text-decoration:underline;text-underline-offset:5px}
+nav .btn{min-height:42px;padding:0 18px;font-size:15px}
+.menubtn{display:none;background:transparent;border:1.5px solid rgba(255,255,255,.6);color:#fff;border-radius:999px;min-height:42px;padding:0 16px;font:inherit;font-size:15px;cursor:pointer}
+@media(max-width:900px){
+ .menubtn{display:inline-flex;align-items:center}
+ .links{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;gap:0;background:#174a47;padding:6px max(5vw,16px) 18px}
+ nav.open .links{display:flex}.links a{padding:13px 0;font-size:18px;display:block;border-bottom:1px solid rgba(255,255,255,.12)}
+}
+@media(max-width:480px){nav .call-top{display:none}}
+
+/* hero */
+.hero{position:relative;min-height:max(620px,100svh);display:grid;align-items:end;color:#fff;overflow:hidden;background:#123b3b}
+.hero>svg{position:absolute;inset:0;width:100%;height:100%}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,20,22,.25) 0%,rgba(8,20,22,.05) 30%,rgba(8,20,22,.7) 100%)}
+.hero .in{position:relative;z-index:2;padding:110px max(5vw,16px) clamp(56px,10vh,104px);max-width:calc(1240px + 2 * max(5vw,16px));margin:0 auto;width:100%}
+.hero .copy{max-width:620px}
+.hero h1{font-size:clamp(46px,8vw,104px);max-width:9ch;letter-spacing:-.02em;margin-bottom:16px;text-shadow:0 2px 30px rgba(0,0,0,.25)}
+.hero p{font-size:clamp(18px,2vw,21px);max-width:32em;opacity:.95;margin-bottom:26px}
+.status{display:inline-flex;align-items:center;gap:8px;background:rgba(10,25,26,.55);backdrop-filter:blur(6px);border-radius:999px;padding:7px 14px;font-size:15px;margin-bottom:22px}
+.dot{width:9px;height:9px;border-radius:50%;background:#9aa;flex:none}.dot.on{background:#5ee08a;box-shadow:0 0 0 4px rgba(94,224,138,.25)}
+@media(max-width:700px){.hero::after{background:linear-gradient(180deg,rgba(8,20,22,.3),rgba(8,20,22,.55) 40%,rgba(8,20,22,.82))}}
+.meta{display:flex;flex-wrap:wrap;gap:6px 22px;margin-top:26px;font-size:15px;opacity:.9}.meta span{white-space:nowrap}
+
+/* intro */
+.intro{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:clamp(28px,6vw,96px);align-items:start}
+.lead{font-size:clamp(19px,2vw,22px)}
+.facts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:28px}
+.facts div{border-top:2px solid var(--fjord2);padding-top:12px}
+.facts b{display:block;font-family:"Young Serif",serif;font-weight:400;font-size:clamp(26px,3vw,32px);line-height:1.1;white-space:nowrap}
+.facts small{color:var(--muted);font-size:14px;display:block}
+@media(max-width:820px){.intro{grid-template-columns:minmax(0,1fr)}}
+@media(max-width:420px){.facts{grid-template-columns:minmax(0,1fr)}}
+
+/* services */
+.svc{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;margin-top:36px}
+.svc article{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:22px}
+.svc svg{width:40px;height:40px;color:var(--fjord2);margin-bottom:12px}
+.svc p{color:var(--muted);font-size:15.5px;margin:8px 0 0}
+@media(max-width:1000px){.svc{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:520px){.svc{grid-template-columns:minmax(0,1fr)}}
+
+/* menu */
+.menu{background:var(--fjord);color:#f3f6f1}
+.menu .sub{color:#d6e3df;margin:0}
+.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.mhead{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:20px}
+.also{margin:18px 0 28px;color:#f3d9a8;font-weight:600}
+.card{background:var(--card);color:var(--ink);border-radius:8px;padding:clamp(20px,4vw,48px);box-shadow:0 30px 60px -30px rgba(0,0,0,.55)}
+.mtools{margin-bottom:16px}
+.search input{width:100%;min-height:50px;border:1.5px solid var(--line);border-radius:999px;padding:0 20px;font:inherit;font-size:16px;background:var(--bg);color:var(--ink)}
+.search input:focus{outline:3px solid var(--fjord2);outline-offset:1px}
+.chips{display:flex;gap:8px;overflow-x:auto;padding:2px 0 14px;margin-bottom:12px;border-bottom:1px solid var(--line);scrollbar-width:thin}
+.chips a{flex:none;text-decoration:none;font-size:15px;font-weight:600;padding:9px 15px;border-radius:999px;background:var(--soft);white-space:nowrap}
+@media(min-width:900px){.chips{flex-wrap:wrap;overflow:visible}}
+.chips a:hover{background:color-mix(in srgb,var(--fjord2) 18%,var(--soft))}
+.mcols{columns:2 400px;column-gap:clamp(28px,5vw,64px)}
+.mcat{padding-top:22px}
+.mcat[hidden],.dish[hidden]{display:none}
+.mcat h3{color:var(--redink);font-size:26px;border-bottom:1.5px solid var(--line);padding-bottom:8px;break-after:avoid}
+.mnote{font-size:14.5px;color:var(--muted);margin:10px 0 2px;font-style:italic;break-after:avoid}
+.dish{display:flex;flex-wrap:wrap;gap:4px 16px;align-items:baseline;padding:12px 0;border-bottom:1px dotted var(--line);break-inside:avoid}
+.dn{flex:1 1 220px}.dn strong{display:block;font-weight:600;font-size:17px}.dn i{font-style:normal;color:var(--muted);font-weight:400;font-size:14px;margin-right:4px}
+.dn span{display:block;color:var(--muted);font-size:15px;line-height:1.45}
+.dn small{display:block;color:var(--muted);font-size:13px;margin-top:2px;opacity:.85}
+.p{white-space:nowrap;font-weight:600;font-variant-numeric:tabular-nums}
+.vars{flex-basis:100%;display:flex;flex-wrap:wrap;gap:6px 8px}
+.vars span{font-size:14px;background:var(--soft);border-radius:6px;padding:4px 9px;white-space:nowrap}
+.extras{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:28px}
+.extras .dish{flex-wrap:nowrap}.extras .dn{flex:1 1 auto}
+.empty{text-align:center;color:var(--muted);padding:24px 0;margin:0}
+.mfoot{margin:20px 0 0;font-size:14.5px;color:#d6e3df;max-width:60em}
+@media(max-width:420px){.extras{grid-template-columns:minmax(0,1fr)}}
+
+/* rooms */
+.rooms{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(16px,2.5vw,28px);margin-top:36px}
+.room{background:var(--card);border:1px solid var(--line);border-radius:8px;overflow:hidden}
+.room svg{display:block;width:100%;height:auto;aspect-ratio:16/9}
+.room .t{padding:20px 22px 24px}.room p{color:var(--muted);margin:8px 0 0;font-size:16px}
+@media(max-width:900px){.rooms{grid-template-columns:minmax(0,1fr)}.room{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);align-items:center}.room svg{height:100%;aspect-ratio:auto;min-height:150px}}
+@media(max-width:520px){.room{grid-template-columns:minmax(0,1fr)}.room svg{aspect-ratio:16/9;height:auto;min-height:0}}
+
+/* news */
+.news{background:var(--soft)}
+.posts{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;margin-top:32px}
+.post{background:var(--card);border-radius:8px;padding:20px 22px;border:1px solid var(--line);display:flex;flex-direction:column}
+.post time,.post .tag{font-size:14px;color:var(--muted)}
+.post h3{margin:6px 0 8px;font-size:19px}.post p{font-size:15.5px;color:var(--muted);margin:0}
+.more{margin-top:28px}
+@media(max-width:1000px){.posts{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:520px){.posts{grid-template-columns:minmax(0,1fr)}}
+
+/* hours + reviews */
+.hr{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(28px,5vw,80px)}
+table{width:100%;border-collapse:collapse;font-size:17px}
+td{padding:12px 0;border-bottom:1px solid var(--line)}td:last-child{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}
+tr.today td{font-weight:600;color:var(--redink)}
+.small{font-size:14.5px;color:var(--muted);margin-top:14px}
+.revs{display:grid;gap:16px}
+.rev{display:grid;grid-template-columns:auto minmax(0,1fr);gap:20px;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:8px;padding:22px}
+.big{font-family:"Young Serif",serif;font-size:clamp(48px,7vw,72px);line-height:1;color:var(--fjord2);white-space:nowrap}
+.stars{color:var(--red);font-size:20px;letter-spacing:2px}
+.rev p{margin:4px 0 8px;color:var(--muted);font-size:15.5px}
+.rev a{font-weight:600;font-size:15.5px;display:inline-block;padding:8px 0}
+@media(max-width:820px){.hr{grid-template-columns:minmax(0,1fr)}}
+
+/* rent */
+.rent{display:grid;grid-template-columns:minmax(0,1.4fr) auto;gap:28px;align-items:center;background:color-mix(in srgb,var(--red) 10%,var(--bg));border-radius:10px;padding:clamp(28px,4vw,56px)}
+.rent p{margin:12px 0 0;max-width:40em}
+@media(max-width:760px){.rent{grid-template-columns:minmax(0,1fr)}}
+
+/* visit */
+.visit{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px;margin-top:32px}
+.visit h3{margin-bottom:8px}.visit p{color:var(--muted);margin:0 0 12px}
+.visit .v{color:var(--ink);font-weight:600;font-size:18px}.visit .v a{display:inline-block;padding:6px 0}
+.acts{display:flex;flex-wrap:wrap;gap:10px}
+@media(max-width:820px){.visit{grid-template-columns:minmax(0,1fr)}}
+
+footer{background:#0d2a29;color:#cfdad5;padding:48px max(5vw,16px) 40px;font-size:15px}
+footer .wrap{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+footer .logo{color:#fff;font-size:24px}footer a{color:#fff;display:inline-block;padding:6px 0}footer p{margin:0 0 6px}
+footer .copy{grid-column:1/-1;border-top:1px solid rgba(255,255,255,.12);padding-top:18px;color:#9fb1ab}
+@media(max-width:760px){footer .wrap{grid-template-columns:minmax(0,1fr)}}
+
+/* mobile call bar */
+.bar{display:none}
+@media(max-width:700px){
+ .bar{display:grid;grid-template-columns:1fr 1fr;gap:8px;position:fixed;left:0;right:0;bottom:0;z-index:25;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(8px);border-top:1px solid var(--line)}
+ .bar .btn{width:100%;padding:0 10px}
+ footer{padding-bottom:110px}
+}
+
+.rv{opacity:0;transform:translateY(24px);transition:opacity .7s ease-out,transform .7s ease-out}
+.rv.on{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}.btn{transition:none}}
+</style>
+</head>
+<body>
+<a class="skip" href="#innhold">Hopp til innhold</a>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-phone" viewBox="0 0 24 24"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2C6.4 2 2 6.1 2 11.3c0 2.9 1.4 5.5 3.7 7.2V22l3.4-1.9c.9.3 1.9.4 2.9.4 5.6 0 10-4.1 10-9.2S17.6 2 12 2zm1 12.4-2.6-2.7-5 2.7 5.5-5.8 2.6 2.7 4.9-2.7z"/></symbol>
+</svg>
+
+<nav id="nav" aria-label="Hovedmeny">
+  <a class="logo" href="#top">Casa Mia</a>
+  <ul class="links" id="links">
+    <li><a href="#om">Om oss</a></li>
+    <li><a href="#meny">Meny</a></li>
+    <li><a href="#aktuelt">Aktuelt</a></li>
+    <li><a href="#apningstider">Åpningstider</a></li>
+    <li><a href="#leie">Lokale til leie</a></li>
+    <li><a href="#kontakt">Kontakt</a></li>
+  </ul>
+  <a class="btn call-top" href="tel:+4756180002"><svg aria-hidden="true"><use href="#i-phone"/></svg>Ring oss</a>
+  <button class="menubtn" id="menubtn" type="button" aria-expanded="false" aria-controls="links">Meny</button>
+</nav>
+
+<header class="hero" id="top">
+  <svg viewBox="0 0 1600 1000" preserveAspectRatio="xMaxYMid slice" aria-hidden="true">
+    <defs>
+      <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1b4a52"/><stop offset=".55" stop-color="#d98a5c"/><stop offset=".72" stop-color="#f3c48a"/></linearGradient>
+      <linearGradient id="sea" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2c6566"/><stop offset="1" stop-color="#0e2f31"/></linearGradient>
+      <radialGradient id="glow" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#ffd58a" stop-opacity=".9"/><stop offset="1" stop-color="#ffd58a" stop-opacity="0"/></radialGradient>
+      <g id="win"><rect width="34" height="44" rx="3" fill="#ffd27a"/><rect x="16" width="2" height="44" fill="#a2562c" opacity=".5"/></g>
+    </defs>
+    <rect width="1600" height="1000" fill="url(#sky)"/>
+    <circle cx="900" cy="560" r="70" fill="#fbe1ad" opacity=".9"/>
+    <path d="M0 600 Q200 520 420 575 T860 560 T1300 540 T1600 570 V700 H0Z" fill="#3e5f63"/>
+    <path d="M0 640 Q260 590 520 630 T1100 615 T1600 625 V720 H0Z" fill="#2b4a4e"/>
+    <rect y="660" width="1600" height="340" fill="url(#sea)"/>
+    <g fill="#fbe1ad" opacity=".35" transform="translate(-220 0)"><rect x="1060" y="700" width="120" height="3" rx="2"/><rect x="1080" y="730" width="80" height="3" rx="2"/><rect x="1040" y="770" width="150" height="3" rx="2"/><rect x="1095" y="810" width="60" height="3" rx="2"/></g>
+    <g transform="translate(1090 430)">
+      <rect x="-40" y="230" width="560" height="34" fill="#1a2c2c"/>
+      <rect x="0" y="80" width="440" height="160" fill="#f2ede2"/>
+      <path d="M-20 90 L220 -10 L460 90Z" fill="#8f2e22"/><path d="M220 -10 L460 90 L440 90 L220 0Z" fill="#000" opacity=".2"/>
+      <use href="#win" x="40" y="120"/><use href="#win" x="100" y="120"/><use href="#win" x="300" y="120"/><use href="#win" x="360" y="120"/>
+      <rect x="190" y="140" width="60" height="100" rx="3" fill="#ffd27a"/>
+      <circle cx="220" cy="180" r="140" fill="url(#glow)" opacity=".5"/>
+      <rect x="160" y="100" width="120" height="26" fill="#1d5a57"/>
+      <text x="220" y="119" text-anchor="middle" font-family="Georgia,serif" font-size="16" fill="#fff">CASA MIA</text>
+      <g fill="#ffd27a"><circle cx="-10" cy="220" r="4"/><circle cx="460" cy="220" r="4"/></g>
+    </g>
+    <path d="M1030 700 h560" stroke="#ffd27a" stroke-width="3" opacity=".25"/>
+  </svg>
+  <div class="in"><div class="copy">
+    <div class="status" id="status" role="status"><span class="dot" id="dot"></span><span id="statustext">Åpent hver dag fra kl. 14</span></div>
+    <h1>Casa Mia Austevoll</h1>
+    <p>Restaurant, pub og uteservering midt i Storebø. Pizza, grill, tex mex og kebab – spis hos oss eller ta med hjem.</p>
+    <a class="btn" href="tel:+4756180002"><svg aria-hidden="true"><use href="#i-phone"/></svg>Ring 56 18 00 02</a>
+    <div class="meta"><span>Storebø, Austevoll</span><span>★ 4,4 på Google</span><span>96 % anbefaler oss på Facebook</span></div>
+  </div></div>
+</header>
+
+<main id="innhold">
+<section class="band" id="om">
+  <div class="wrap intro">
+    <div class="rv"><h2>Austevolls møteplass, fra middag til sene kvelder</h2></div>
+    <div class="rv">
+      <p class="lead">Casa Mia er stedet folk på Austevoll møtes – til en rolig middag med familien, en øl på puben etter en lang uke eller en sommerkveld på uteserveringen.</p>
+      <p>Kjøkkenet er åpent hver dag fra klokken 14, med over 60 retter på menyen: pizza i over tjue varianter, grillretter, indrefilet, tex mex, pasta, kebab og hjemmelagde burgere. Torsdag er det komle, og når sesongen er inne, står lutefisken på menyen. Barnestoler har vi selvsagt, og baren lager gode drinker.</p>
+      <div class="facts">
+        <div><b>4,4 / 5</b><small>på Google, 204 anmeldelser</small></div>
+        <div><b>96 %</b><small>anbefaler oss på Facebook</small></div>
+        <div><b>200–300 kr</b><small>per person i snitt</small></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band" style="padding-top:0" aria-labelledby="tilbud">
+  <div class="wrap">
+    <h2 id="tilbud" class="rv">Dette tilbyr vi</h2>
+    <div class="svc">
+      <article class="rv"><svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="22" r="13" fill="none" stroke="currentColor" stroke-width="2.5"/><circle cx="20" cy="22" r="7" fill="currentColor" opacity=".25"/><path d="M4 6v10M8 6v10M6 16v18M36 6c-4 3-4 10 0 12v16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg><h3>Spis inne</h3><p>À la carte hver dag, for alt fra hverdagsmiddag til bursdag og jubileum.</p></article>
+      <article class="rv"><svg viewBox="0 0 40 40" aria-hidden="true"><path d="M6 18 20 6l14 12z" fill="currentColor" opacity=".3"/><path d="M6 18 20 6l14 12M20 6v28M12 34h16M8 26h8M24 26h8" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg><h3>Uteservering</h3><p>Når været tillater det, dekker vi på ute – Storebøs fineste plass en sommerkveld.</p></article>
+      <article class="rv"><svg viewBox="0 0 40 40" aria-hidden="true"><path d="M8 14h24l-2 20H10z" fill="currentColor" opacity=".25"/><path d="M8 14h24l-2 20H10zM14 14v-3a6 6 0 0 1 12 0v3" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/></svg><h3>Hent selv</h3><p>Ring inn bestillingen på <span style="white-space:nowrap">56 18 00 02</span> og hent maten hos oss når den er klar.</p></article>
+      <article class="rv"><svg viewBox="0 0 40 40" aria-hidden="true"><rect x="5" y="13" width="30" height="21" rx="2" fill="currentColor" opacity=".25"/><path d="M5 13h30v21H5zM5 20h30M20 13v21M20 13c-3-6-10-6-8-1 1 2 6 1 8 1 2 0 7 1 8-1 2-5-5-5-8 1" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/></svg><h3>Gavekort</h3><p>En god middag er en fin gave. Spør etter gavekort hos oss eller på telefon.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="band menu" id="meny">
+  <div class="wrap">
+    <div class="mhead">
+      <div>
+        <h2>Menyen vår</h2>
+        <p class="sub">Pizza, grill, tex mex, kebab, pasta og mer. Spis hos oss, eller bestill på telefon og hent maten selv.</p>
+      </div>
+      <a class="btn" href="tel:+4756180002"><svg aria-hidden="true"><use href="#i-phone"/></svg>Bestill: 56 18 00 02</a>
+    </div>
+    <p class="also">Torsdager serverer vi komle, og i sesongen står lutefisk på menyen.</p>
+    <div class="card mcard">
+      <div class="mtools">
+        <label class="search"><span class="vh">Søk i menyen</span><input id="msearch" type="search" placeholder="Søk, f.eks. kylling eller sterk" autocomplete="off"></label>
+      </div>
+<div class="chips" role="list"><a role="listitem" href="#m-forretter">Forretter</a><a role="listitem" href="#m-burger">Burger og sandwich</a><a role="listitem" href="#m-texmex">Tex Mex</a><a role="listitem" href="#m-grill">Grill</a><a role="listitem" href="#m-kjott">Kjøttretter og fisk</a><a role="listitem" href="#m-pasta">Pasta</a><a role="listitem" href="#m-salater">Salater og småretter</a><a role="listitem" href="#m-pizza">Pizza</a><a role="listitem" href="#m-innbakt">Innbakt pizza</a><a role="listitem" href="#m-kebab">Kebab</a><a role="listitem" href="#m-ekstra">Ekstra</a></div>
+<div class="mcols" id="mcols">
+<section class="mcat" id="m-forretter" aria-labelledby="h-forretter"><h3 id="h-forretter">Forretter</h3>
+<div class="dish"><div class="dn"><strong><i>01</i> Hjemmelaget tortilla nachos</strong><span>Servert med salsa og rømme</span><small>Allergener: 11</small></div><b class="p">99,-</b></div>
+<div class="dish"><div class="dn"><strong><i>02</i> Tacotallerken for 2 pers.</strong><span>Tacokjøtt, tortilla, nachos, salat, rømme, salsa</span><small>Allergener: 11</small></div><b class="p">249,-</b></div>
+<div class="dish"><div class="dn"><strong><i>03</i> Baconsnurret scampi</strong><span>Salat, søt chili</span><small>Allergener: 7</small></div><b class="p">179,-</b></div>
+<div class="dish"><div class="dn"><strong><i>04</i> Husets hvitløksbrød</strong><span>Tomat, løk, paprika, ost, hvitløk, gratinert ost</span><small>Allergener: 1+11</small></div><b class="p">99,-</b></div>
+</section>
+<section class="mcat" id="m-burger" aria-labelledby="h-burger"><h3 id="h-burger">Burger og sandwich</h3>
+<p class="mnote">Alle burgere er hjemmelaget.</p>
+<div class="dish"><div class="dn"><strong><i>05</i> Kylling BLT</strong><span>Baguettebrød, kyllingfilet, bacon, salat, tomat, majones, pommes</span><small>Allergener: 1+10+11+4</small></div><b class="p">189,-</b></div>
+<div class="dish"><div class="dn"><strong><i>06</i> Kylling avocado</strong><span>Baguettebrød, kyllingfilet, guacamole, salat, tomat, pommes</span><small>Allergener: 1</small></div><b class="p">189,-</b></div>
+<div class="dish"><div class="dn"><strong><i>07</i> Biff avocado</strong><span>Baguettebrød, strimlet biff, guacamole, salat, tomat, pommes</span><small>Allergener: 1</small></div><b class="p">189,-</b></div>
+<div class="dish multi"><div class="dn"><strong><i>08</i> Tex Mex burger</strong><span>Salat, løkringer, jalapeños, pommes</span><small>Allergener: 1</small></div><span class="vars"><span>150 g <b>189,-</b></span><span>300 g <b>299,-</b></span></span></div>
+<div class="dish multi"><div class="dn"><strong><i>09</i> Chili bacon</strong><span>Chilimajones, salat, løk, jalapeños, cheddarost, pommes</span><small>Allergener: 1+10+11+4</small></div><span class="vars"><span>150 g <b>189,-</b></span><span>300 g <b>299,-</b></span></span></div>
+<div class="dish multi"><div class="dn"><strong><i>10</i> Casa Mia</strong><span>Burgerdressing, salat, tomat, løk, mais, syltet agurk, cheddarost, pommes</span><small>Allergener: 1+11</small></div><span class="vars"><span>150 g <b>189,-</b></span><span>300 g <b>299,-</b></span></span></div>
+</section>
+<section class="mcat" id="m-texmex" aria-labelledby="h-texmex"><h3 id="h-texmex">Tex Mex</h3>
+<div class="dish"><div class="dn"><strong><i>11</i> Enchiladas</strong><span>2 maistortillas fylt med spicy kjøttblanding eller kylling, toppet med salsa og gratinert ost. Servert med salat, potetbåter, rømme, guacamole, tomat og mais</span><small>Allergener: 11</small></div><b class="p">329,-</b></div>
+<div class="dish multi"><div class="dn"><strong><i>12</i> Burritos</strong><span>Spicy kjøttblanding, kylling eller vegetar i hvetetortilla, toppet med salsa og gratinert ost. Servert med salat, båtpoteter, rømme, guacamole, tomat og mais</span><small>Allergener: 1+11</small></div><span class="vars"><span>Vegetar <b>269,-</b></span><span>Kylling <b>329,-</b></span><span>Spicy kjøttblanding <b>329,-</b></span></span></div>
+<div class="dish multi"><div class="dn"><strong><i>13</i> Ostegratinert nachos</strong><span>Servert med rømme, chili og tomat</span><small>Allergener: 11</small></div><span class="vars"><span>Vegetar <b>269,-</b></span><span>Kylling <b>319,-</b></span><span>Spicy kjøtt <b>319,-</b></span><span>Biff <b>329,-</b></span></span></div>
+<div class="dish multi"><div class="dn"><strong><i>14</i> Fajitas originale</strong><span>Pannestekt biff, kylling, scampi, combo eller vegetar med løk, paprika og jalapeños. Servert med rømme, guacamole, salsa, ost og 4 tortillalefser</span><small>Allergener: 1+3+7+11</small></div><span class="vars"><span>Vegetar <b>279,-</b></span><span>Kylling <b>359,-</b></span><span>Biff <b>379,-</b></span><span>Scampi <b>399,-</b></span><span>Combo <b>409,-</b></span></span></div>
+</section>
+<section class="mcat" id="m-grill" aria-labelledby="h-grill"><h3 id="h-grill">Grill</h3>
+<p class="mnote">Alle grillretter serveres med salat og pommes. Valgfri saus eller dressing: bearnaise, hvitløk eller pepper.</p>
+<div class="dish"><div class="dn"><strong><i>15</i> Biffsnadder</strong><span>Biff, løk, paprika, champignon</span></div><b class="p">289,-</b></div>
+<div class="dish"><div class="dn"><strong><i>16</i> Grill mix</strong><span>Biff, kylling, lam</span></div><b class="p">309,-</b></div>
+<div class="dish"><div class="dn"><strong><i>17</i> Kebabtallerken lam / kylling</strong><span>Kebabkjøtt, nanbrød</span><small>Allergener: 1</small></div><b class="p">289,-</b></div>
+<div class="dish"><div class="dn"><strong><i>18</i> Kylling karri</strong><span>Kylling, løk, paprika, champignon, karri</span></div><b class="p">289,-</b></div>
+<div class="dish"><div class="dn"><strong><i>19</i> Løvstektallerken</strong><span>Løvstek, brød under om ønskelig</span><small>Allergener: 11+12</small></div><b class="p">269,-</b></div>
+</section>
+<section class="mcat" id="m-kjott" aria-labelledby="h-kjott"><h3 id="h-kjott">Kjøttretter og fisk</h3>
+<p class="mnote">Alle retter serveres med salat og brød. Velg mellom fløtegratinerte poteter og båtpoteter. All biff er indrefilet.</p>
+<div class="dish"><div class="dn"><strong><i>20</i> Baconsnurret indrefilet</strong><span>Bearnaisesaus</span><small>Allergener: 10+11</small></div><b class="p">419,-</b></div>
+<div class="dish"><div class="dn"><strong><i>21</i> Pepperbiff</strong><span>Biff med peppersaus</span><small>Allergener: 1+11+12</small></div><b class="p">419,-</b></div>
+<div class="dish"><div class="dn"><strong><i>22</i> Indrefilet</strong><span>Biff med bearnaisesaus</span><small>Allergener: 10+11</small></div><b class="p">419,-</b></div>
+<div class="dish"><div class="dn"><strong><i>23</i> Black and White</strong><span>Biff, kylling, peppersaus, bearnaisesaus</span><small>Allergener: 10+11+3</small></div><b class="p">419,-</b></div>
+<div class="dish"><div class="dn"><strong><i>24</i> Scampi à la crema</strong><span>Kongereker, champignon, løk, fløtesaus, grønnsaker</span><small>Allergener: 11+12+7+1</small></div><b class="p">419,-</b></div>
+</section>
+<section class="mcat" id="m-pasta" aria-labelledby="h-pasta"><h3 id="h-pasta">Pasta</h3>
+<div class="dish"><div class="dn"><strong><i>25</i> Spagetti bolognese</strong><span>Spagetti og kjøttsaus</span><small>Allergener: 1+12+8</small></div><b class="p">229,-</b></div>
+<div class="dish"><div class="dn"><strong><i>26</i> Spagetti kylling</strong><span>Kyllingfilet, løk, champignon, paprika, fløtesaus</span><small>Allergener: 1+11+12</small></div><b class="p">269,-</b></div>
+<div class="dish"><div class="dn"><strong><i>27</i> Lasagne al forno</strong><span>Pastaplater, kjøttsaus, ost, fløtesaus</span><small>Allergener: 1+11+12+8</small></div><b class="p">259,-</b></div>
+</section>
+<section class="mcat" id="m-salater" aria-labelledby="h-salater"><h3 id="h-salater">Salater og småretter</h3>
+<p class="mnote">Alle salater og småretter serveres med brød og smør.</p>
+<div class="dish"><div class="dn"><strong><i>28</i> Scampisalat</strong><span>Chilimajones</span><small>Allergener: 7+10</small></div><b class="p">199,-</b></div>
+<div class="dish"><div class="dn"><strong><i>29</i> Tacosalat</strong><span>Tacokjøtt, tortilla, nachos, salsa, rømme</span><small>Allergener: 1+11</small></div><b class="p">179,-</b></div>
+<div class="dish"><div class="dn"><strong><i>30</i> Cæsar kylling</strong><span>Marinert kyllingfilet, bacon, hvitløkskrutonger, parmesan, dressing</span><small>Allergener: 1+11</small></div><b class="p">189,-</b></div>
+</section>
+<section class="mcat" id="m-pizza" aria-labelledby="h-pizza"><h3 id="h-pizza">Pizza</h3>
+<p class="mnote">Alle pizzaer har tomatsaus og ost. To størrelser.</p>
+<div class="dish"><div class="dn"><strong><i>36</i> Margherita</strong><span>Tomatsaus, ost</span><small>Allergener: 1+11</small></div><b class="p">169,- / 289,-</b></div>
+<div class="dish"><div class="dn"><strong><i>37</i> Hawaii</strong><span>Skinke, ananas</span><small>Allergener: 1+11</small></div><b class="p">199,- / 339,-</b></div>
+<div class="dish"><div class="dn"><strong><i>38</i> Roma</strong><span>Bacon, kjøttdeig, løk</span><small>Allergener: 1+11</small></div><b class="p">219,- / 359,-</b></div>
+<div class="dish"><div class="dn"><strong><i>39</i> Eldorado</strong><span>Pepperoni, ananas</span><small>Allergener: 1+11</small></div><b class="p">199,- / 339,-</b></div>
+<div class="dish"><div class="dn"><strong><i>40</i> Galabria</strong><span>Biff, skinke, bacon</span><small>Allergener: 1+11</small></div><b class="p">219,- / 359,-</b></div>
+<div class="dish"><div class="dn"><strong><i>41</i> Naxos (sterk)</strong><span>Biff, løk, champignon, paprika</span><small>Allergener: 1+11</small></div><b class="p">219,- / 359,-</b></div>
+<div class="dish"><div class="dn"><strong><i>42</i> Dersim</strong><span>Biff, skinke, tomat, ananas</span><small>Allergener: 1+11</small></div><b class="p">219,- / 359,-</b></div>
+<div class="dish"><div class="dn"><strong><i>43</i> Biffpizza</strong><span>Biff</span><small>Allergener: 1+11</small></div><b class="p">219,- / 359,-</b></div>
+<div class="dish"><div class="dn"><strong><i>44</i> Mexicana (sterk)</strong><span>Pepperoni, bacon, kjøttsaus, jalapeños</span><small>Allergener: 1+11+8</small></div><b class="p">219,- / 359,-</b></div>
+<div class="dish"><div class="dn"><strong><i>45</i> Kebabpizza</strong><span>Biff, lam eller kylling, salat, tomat, agurk, hvitløksdressing</span><small>Allergener: 1+11</small></div><b class="p">259,- / 389,-</b></div>
+<div class="dish"><div class="dn"><strong><i>46</i> Siciliana</strong><span>Skinke, kjøttdeig, purreløk, tomat</span><small>Allergener: 1+11</small></div><b class="p">219,- / 359,-</b></div>
+<div class="dish"><div class="dn"><strong><i>47</i> Mamma Mia</strong><span>Reker, bacon, champignon, kjøttdeig</span><small>Allergener: 1+11+7</small></div><b class="p">219,- / 359,-</b></div>
+<div class="dish"><div class="dn"><strong><i>48</i> Chicken India</strong><span>Kylling, karri, ananas</span><small>Allergener: 1+11</small></div><b class="p">219,- / 359,-</b></div>
+<div class="dish"><div class="dn"><strong><i>49</i> Milano</strong><span>Biff, løk, champignon, kjøttdeig, ananas, paprika</span><small>Allergener: 1+11+7</small></div><b class="p">219,- / 359,-</b></div>
+<div class="dish"><div class="dn"><strong><i>50</i> Mexopotamia</strong><span>Salami, pepperoni, biff</span><small>Allergener: 1+11</small></div><b class="p">219,- / 359,-</b></div>
+<div class="dish"><div class="dn"><strong><i>51</i> Amed</strong><span>Biff, bacon, kjøttdeig, løk, paprika</span><small>Allergener: 1+11</small></div><b class="p">219,- / 359,-</b></div>
+<div class="dish"><div class="dn"><strong><i>52</i> Vegetar</strong><span>Champignon, løk, paprika, ananas, tomat</span><small>Allergener: 1+11</small></div><b class="p">199,- / 319,-</b></div>
+<div class="dish"><div class="dn"><strong><i>53</i> Black &amp; White</strong><span>Biff, kylling, paprika, løk, bearnaisesaus</span><small>Allergener: 1+11+12</small></div><b class="p">239,- / 369,-</b></div>
+<div class="dish"><div class="dn"><strong><i>54</i> Bolognese</strong><span>Kjøttsaus</span><small>Allergener: 1+11+8</small></div><b class="p">209,- / 329,-</b></div>
+<div class="dish"><div class="dn"><strong><i>55</i> Kobani</strong><span>Biff, pepperoni, paprika</span><small>Allergener: 1+11</small></div><b class="p">219,- / 359,-</b></div>
+<div class="dish"><div class="dn"><strong><i>56</i> Azad</strong><span>Marinert kyllingfilet, pepperoni, løk, paprika</span><small>Allergener: 1+11</small></div><b class="p">219,- / 359,-</b></div>
+<div class="dish"><div class="dn"><strong><i>57</i> Tacopizza</strong><span>Tacokjøtt, purreløk, mais, paprika, nachochips, tacosaus</span><small>Allergener: 1+11</small></div><b class="p">219,- / 359,-</b></div>
+<div class="dish"><div class="dn"><strong><i>58</i> Tacopizza med kylling</strong><span>Marinert kyllingfilet, purreløk, mais, paprika, nachochips, tacosaus</span><small>Allergener: 1+11</small></div><b class="p">219,- / 359,-</b></div>
+<div class="dish"><div class="dn"><strong><i>59</i> Rengin</strong><span>Biff, skinke, pepperoni</span><small>Allergener: 1+11</small></div><b class="p">219,- / 359,-</b></div>
+<div class="dish"><div class="dn"><strong><i>60</i> Lag din egen pizza</strong><span>Inkludert 3 forskjellige kjøttsorter og maks 3 forskjellige grønnsaker</span><small>Allergener: 1+11</small></div><b class="p">259,- / 389,-</b></div>
+<div class="dish"><div class="dn"><strong>Glutenfri pizza</strong><span>Valgfri pizza med glutenfri bunn</span></div><b class="p">259,-</b></div>
+</section>
+<section class="mcat" id="m-innbakt" aria-labelledby="h-innbakt"><h3 id="h-innbakt">Innbakt pizza</h3>
+<div class="dish"><div class="dn"><strong><i>61</i> Calzone</strong><span>Tomatsaus, ost, skinke eller pepperoni</span><small>Allergener: 1+11</small></div><b class="p">229,-</b></div>
+<div class="dish"><div class="dn"><strong><i>62</i> Romano</strong><span>Tomatsaus, ost, kjøttsaus</span><small>Allergener: 1+11+8</small></div><b class="p">229,-</b></div>
+<div class="dish"><div class="dn"><strong><i>63</i> Austevoll spesial (halvt innbakt)</strong><span>Tomatsaus, ost, biff, paprika, løk, bearnaisesaus</span><small>Allergener: 1+11+12</small></div><b class="p">289,-</b></div>
+<div class="dish"><div class="dn"><strong><i>64</i> Calzone mix</strong><span>Tomatsaus, ost, biff, kylling</span><small>Allergener: 1+11</small></div><b class="p">279,-</b></div>
+</section>
+<section class="mcat" id="m-kebab" aria-labelledby="h-kebab"><h3 id="h-kebab">Kebab</h3>
+<p class="mnote">Allergener for all kebab: 1+11. Rullekebab finnes i tre størrelser.</p>
+<div class="dish"><div class="dn"><strong><i>65</i> Rullekebab (lam)</strong><small>Allergener: 1+11</small></div><b class="p">159,- / 179,- / 279,-</b></div>
+<div class="dish"><div class="dn"><strong><i>66</i> Rullekebab (biff)</strong><small>Allergener: 1+11</small></div><b class="p">159,- / 179,- / 279,-</b></div>
+<div class="dish"><div class="dn"><strong><i>67</i> Rullekebab (kylling)</strong><small>Allergener: 1+11</small></div><b class="p">159,- / 179,- / 279,-</b></div>
+<div class="dish"><div class="dn"><strong><i>68</i> Kebab i pita (kylling)</strong><small>Allergener: 1+11</small></div><b class="p">179,-</b></div>
+<div class="dish"><div class="dn"><strong><i>69</i> Kebab i pita (lam)</strong><small>Allergener: 1+11</small></div><b class="p">179,-</b></div>
+<div class="dish"><div class="dn"><strong><i>70</i> Kebab i pita (biff)</strong><small>Allergener: 1+11</small></div><b class="p">179,-</b></div>
+</section>
+<section class="mcat" id="m-ekstra" aria-labelledby="h-ekstra"><h3 id="h-ekstra">Ekstra</h3><div class="extras"><div class="dish"><div class="dn"><strong>Guacamole</strong></div><b class="p">30,-</b></div><div class="dish"><div class="dn"><strong>Tortillas</strong></div><b class="p">10,-</b></div><div class="dish"><div class="dn"><strong>Rømme</strong></div><b class="p">25,-</b></div><div class="dish"><div class="dn"><strong>Salsa</strong></div><b class="p">25,-</b></div><div class="dish"><div class="dn"><strong>Kjøtt</strong></div><b class="p">60,-</b></div><div class="dish"><div class="dn"><strong>Hvitløksdipp</strong></div><b class="p">25,-</b></div><div class="dish"><div class="dn"><strong>Ost</strong></div><b class="p">25,-</b></div><div class="dish"><div class="dn"><strong>Ost, stor</strong></div><b class="p">50,-</b></div><div class="dish"><div class="dn"><strong>Pommes, liten</strong></div><b class="p">49,-</b></div><div class="dish"><div class="dn"><strong>Pommes, stor</strong></div><b class="p">69,-</b></div><div class="dish"><div class="dn"><strong>Løkringer</strong></div><b class="p">10,-</b></div></div></section>
+</div><p class="empty" id="mempty" hidden>Ingen retter passer søket ditt.</p>
+    </div>
+    <p class="mfoot">Tallene ved hver rett er allergenkodene fra menyen vår. Har du allergier eller spørsmål om ingredienser, spør oss før du bestiller. Vi tar forbehold om prisendringer.</p>
+  </div>
+</section>
+
+<section class="band" aria-labelledby="rom">
+  <div class="wrap">
+    <h2 id="rom" class="rv">Ett sted, tre stemninger</h2>
+    <div class="rooms">
+      <article class="room rv">
+        <svg viewBox="0 0 320 180" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><rect width="320" height="180" fill="#1d5a57"/><rect y="118" width="320" height="62" fill="#163f3d"/><ellipse cx="150" cy="120" rx="90" ry="14" fill="#f2ede2"/><ellipse cx="150" cy="116" rx="60" ry="8" fill="#d34a2c"/><ellipse cx="135" cy="114" rx="10" ry="3" fill="#f6d27f"/><rect x="236" y="84" width="10" height="34" fill="#f2ede2"/><path d="M241 72q6 7 0 12q-6-5 0-12" fill="#ffc35a"/><circle cx="241" cy="80" r="26" fill="#ffd58a" opacity=".25"/></svg>
+        <div class="t"><h3>Restauranten</h3><p>À la carte hver dag – til hverdagsmiddag, bursdag og andre anledninger.</p></div>
+      </article>
+      <article class="room rv">
+        <svg viewBox="0 0 320 180" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><rect width="320" height="180" fill="#8f2e22"/><rect y="112" width="320" height="68" fill="#5e1d16"/><g fill="#f3c48a"><rect x="70" y="64" width="32" height="48" rx="4"/><rect x="144" y="54" width="32" height="58" rx="4"/><rect x="218" y="70" width="32" height="42" rx="4"/></g><g fill="#fff" opacity=".85"><rect x="70" y="56" width="32" height="12" rx="4"/><rect x="144" y="46" width="32" height="12" rx="4"/><rect x="218" y="62" width="32" height="12" rx="4"/></g></svg>
+        <div class="t"><h3>Puben</h3><p>Kald øl og gode drinker. Puben holder åpent på lørdager, med 20 års aldersgrense.</p></div>
+      </article>
+      <article class="room rv">
+        <svg viewBox="0 0 320 180" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><rect width="320" height="180" fill="#f3c48a"/><circle cx="252" cy="52" r="26" fill="#fbe1ad"/><rect y="112" width="320" height="68" fill="#2c6566"/><path d="M40 112 100 36l60 76z" fill="#d63a24"/><rect x="98" y="74" width="4" height="66" fill="#5e1d16"/><rect x="60" y="130" width="80" height="8" fill="#f2ede2"/><rect x="180" y="130" width="80" height="8" fill="#f2ede2"/></svg>
+        <div class="t"><h3>Uteserveringen</h3><p>Når sola er framme, er uteserveringen det beste stedet for en lang kveld i Storebø.</p></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="band news" id="aktuelt">
+  <div class="wrap">
+    <h2 class="rv">Aktuelt</h2>
+    <p class="sub rv">Det siste fra Facebook-siden vår. Følg oss der for dagens tilbud og endringer i åpningstidene.</p>
+    <div class="posts">
+      <article class="post rv"><time datetime="2026-11-20">20. november 2026</time><h3>Lutefisken er her</h3><p>Lutefisksesongen er i gang, og retten står nå på menyen. Velkommen innom!</p></article>
+      <article class="post rv"><span class="tag">Hver uke</span><h3>Komle hver torsdag</h3><p>Torsdag er komledag på Casa Mia – en tradisjon mange av gjestene våre ser fram til.</p></article>
+      <article class="post rv"><span class="tag">Puben</span><h3>Pub på lørdager</h3><p>Puben er åpen på lørdager med 20 års aldersgrense. Eventuelle endringer varsler vi på Facebook.</p></article>
+      <article class="post rv"><span class="tag">Gaver</span><h3>Vi har gavekort</h3><p>Gi bort en god opplevelse. Gavekort kan kjøpes hos oss i restauranten.</p></article>
+    </div>
+    <div class="more rv"><a class="btn line" href="https://www.facebook.com/casamiaaustevoll" target="_blank" rel="noopener">Følg oss på Facebook</a></div>
+  </div>
+</section>
+
+<section class="band" id="apningstider">
+  <div class="wrap hr">
+    <div class="rv">
+      <h2>Åpningstider</h2>
+      <table aria-label="Åpningstider per ukedag">
+        <tbody id="hours">
+          <tr data-d="1"><td>Mandag</td><td>14.00–21.00</td></tr>
+          <tr data-d="2"><td>Tirsdag</td><td>14.00–21.00</td></tr>
+          <tr data-d="3"><td>Onsdag</td><td>14.00–21.00</td></tr>
+          <tr data-d="4"><td>Torsdag</td><td>14.00–21.00</td></tr>
+          <tr data-d="5"><td>Fredag</td><td>14.00–22.00</td></tr>
+          <tr data-d="6"><td>Lørdag</td><td>14.00–22.00</td></tr>
+          <tr data-d="0"><td>Søndag</td><td>14.00–21.00</td></tr>
+        </tbody>
+      </table>
+      <p class="small">Avvikende åpningstider på helligdager og ved arrangementer varsles på Facebook.</p>
+    </div>
+    <div class="rv" id="anmeldelser">
+      <h2>Hva gjestene sier</h2>
+      <div class="revs">
+        <div class="rev"><div class="big">4,4</div><div><div class="stars" aria-label="4,4 av 5 stjerner">★★★★☆</div><p>Snitt fra 204 anmeldelser på Google</p><a href="https://www.google.com/maps/search/?api=1&amp;query=Casa+Mia+Austevoll+AS+Storeb%C3%B8" target="_blank" rel="noopener">Les og skriv anmeldelser på Google</a></div></div>
+        <div class="rev"><div class="big">96 %</div><div><p>anbefaler Casa Mia, basert på 82 anmeldelser på Facebook</p><a href="https://www.facebook.com/casamiaaustevoll/reviews" target="_blank" rel="noopener">Les anmeldelser på Facebook</a></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="leie" style="padding-top:0">
+  <div class="wrap rent rv">
+    <div>
+      <h2>CM Kafé – lokale til leie</h2>
+      <p>Skal du arrangere bursdag, minnestund, firmafest eller møte? Lokalet i CM Kafé på Prestaneset i Storebø kan leies. Ta kontakt, så finner vi en løsning som passer.</p>
+    </div>
+    <a class="btn" href="tel:+4799871966"><svg aria-hidden="true"><use href="#i-phone"/></svg>Ring 998 71 966</a>
+  </div>
+</section>
+
+<section class="band" id="kontakt" style="padding-top:0">
+  <div class="wrap">
+    <h2 class="rv">Besøk oss</h2>
+    <div class="visit">
+      <div class="rv"><h3>Adresse</h3><p class="v">Gamle Prestegården<br>Fylkesvei 152<br>5392 Storebø</p><a class="btn line" href="https://www.google.com/maps/dir/?api=1&amp;destination=Casa+Mia+Austevoll+AS+Storeb%C3%B8" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-pin"/></svg>Veibeskrivelse</a></div>
+      <div class="rv"><h3>Bordbestilling</h3><p class="v"><a href="tel:+4756180002">56 18 00 02</a></p><p>Ring for bord, takeaway, større selskap eller spørsmål om menyen.</p><a class="btn" href="tel:+4756180002"><svg aria-hidden="true"><use href="#i-phone"/></svg>Ring nå</a></div>
+      <div class="rv"><h3>Skriv til oss</h3><p>Send oss en melding på Facebook Messenger, eller følg oss for nyheter og tilbud.</p><div class="acts"><a class="btn line" href="https://m.me/casamiaaustevoll" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-chat"/></svg>Messenger</a><a class="btn line" href="https://www.instagram.com/casamiaaustevoll/" target="_blank" rel="noopener">Instagram</a></div></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div><a class="logo" href="#top" style="text-decoration:none">Casa Mia Austevoll</a><p style="margin-top:8px">À la carte-restaurant, pub og uteservering i Storebø.</p></div>
+    <div><p>Gamle Prestegården, Fylkesvei 152<br>5392 Storebø</p><p><a href="tel:+4756180002">56 18 00 02</a></p></div>
+    <div><p><a href="https://www.facebook.com/casamiaaustevoll" target="_blank" rel="noopener">Facebook</a></p><p><a href="https://www.instagram.com/casamiaaustevoll/" target="_blank" rel="noopener">Instagram</a></p><p><a href="https://m.me/casamiaaustevoll" target="_blank" rel="noopener">Messenger</a></p></div>
+    <p class="copy">© <span id="yr">2026</span> Casa Mia Austevoll AS · Org.nr. 924 478 640</p>
+  </div>
+</footer>
+
+<div class="bar">
+  <a class="btn" href="tel:+4756180002"><svg aria-hidden="true"><use href="#i-phone"/></svg>Ring</a>
+  <a class="btn line" href="https://www.google.com/maps/dir/?api=1&amp;destination=Casa+Mia+Austevoll+AS+Storeb%C3%B8" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-pin"/></svg>Veibeskrivelse</a>
+</div>
+
+<script>
+{
+  const nav=document.getElementById('nav'),btn=document.getElementById('menubtn');
+  const onScroll=()=>nav.classList.toggle('solid',scrollY>40);
+  addEventListener('scroll',onScroll,{passive:true});onScroll();
+  const setOpen=o=>{nav.classList.toggle('open',o);btn.setAttribute('aria-expanded',String(o));btn.textContent=o?'Lukk':'Meny'};
+  btn.addEventListener('click',()=>setOpen(!nav.classList.contains('open')));
+  document.querySelectorAll('#links a').forEach(a=>a.addEventListener('click',()=>setOpen(false)));
+  addEventListener('keydown',e=>{if(e.key==='Escape')setOpen(false)});
+
+  // Opening hours in Oslo time: [open, close] per weekday, 0 = Sunday
+  const H={0:[14,21],1:[14,21],2:[14,21],3:[14,21],4:[14,21],5:[14,22],6:[14,22]};
+  const days=['søndag','mandag','tirsdag','onsdag','torsdag','fredag','lørdag'];
+  const update=()=>{
+    let d,h,m;
+    try{
+      const p=Object.fromEntries(new Intl.DateTimeFormat('en-GB',{timeZone:'Europe/Oslo',weekday:'short',hour:'2-digit',minute:'2-digit',hourCycle:'h23'}).formatToParts(new Date()).map(x=>[x.type,x.value]));
+      d=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'].indexOf(p.weekday);h=+p.hour;m=+p.minute;
+    }catch(e){const n=new Date();d=n.getDay();h=n.getHours();m=n.getMinutes()}
+    if(d<0)return;
+    const t=h+m/60,[o,c]=H[d],open=t>=o&&t<c;
+    let txt;
+    if(open)txt='Åpent nå · stenger kl. '+c;
+    else if(t<o)txt='Stengt nå · åpner i dag kl. '+o;
+    else txt='Stengt nå · åpner '+days[(d+1)%7]+' kl. '+H[(d+1)%7][0];
+    document.getElementById('statustext').textContent=txt;
+    document.getElementById('dot').classList.toggle('on',open);
+    document.querySelectorAll('#hours tr').forEach(r=>r.classList.toggle('today',+r.dataset.d===d));
+  };
+  update();setInterval(update,60000);
+  document.getElementById('yr').textContent=new Date().getFullYear();
+
+  const q=document.getElementById('msearch'),cols=document.getElementById('mcols'),empty=document.getElementById('mempty');
+  const norm=t=>t.toLowerCase().normalize('NFKD').replace(/[̀-ͯ]/g,'');
+  const dishes=[...cols.querySelectorAll('.dish')].map(el=>({el,t:norm(el.textContent+' '+(el.closest('.mcat').querySelector('h3').textContent))}));
+  q.addEventListener('input',()=>{
+    const v=norm(q.value.trim());let n=0;
+    for(const d of dishes){const hit=!v||v.split(/\s+/).every(w=>d.t.includes(w));d.el.hidden=!hit;if(hit)n++}
+    cols.querySelectorAll('.mcat').forEach(c=>{c.hidden=!c.querySelector('.dish:not([hidden])')});
+    empty.hidden=n>0;
+  });
+
+  const els=document.querySelectorAll('.rv');
+  if('IntersectionObserver' in window&&!matchMedia('(prefers-reduced-motion: reduce)').matches){
+    const io=new IntersectionObserver(es=>{for(const e of es)if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}},{rootMargin:'0px 0px -60px 0px'});
+    els.forEach(el=>io.observe(el));
+  }else els.forEach(el=>el.classList.add('on'));
+}
+</script>
+</body>
+</html>
